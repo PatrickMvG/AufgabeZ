@@ -42,6 +42,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
+    gap: 1vw
 }
 .punkte{
     display: flex;
@@ -53,6 +55,7 @@ body{
 .symbole{
     display: flex;
     justify-content: space-around;
+    gap: 3vw;
 }
 .stein img{
     width: 100%;
@@ -90,6 +93,7 @@ body{
     display: flex;
     justify-content: center;
     gap: 5px;
+    margin-top: 1vh;
     background-color: rgba(251, 116, 116, 0.578);
 }
 .reset-btn{
@@ -114,4 +118,23 @@ body{
     font-weight: 900;
     background-color: rgba(249, 176, 6, 0.415);
     width: 50vw;
+}
+
+.drei, 
+.fuenf, 
+.zehn{
+    border: none;
+    background-color: yellow;
+    color: blue;
+    border-radius: 50px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+.zehn{
+    margin-right: 3vw;
+}
+.drei:hover, 
+.fuenf:hover, 
+.zehn:hover{
+    transform: scale(1.5);
+    filter: drop-shadow(0 0 8px rgb(17, 67, 234));
 }

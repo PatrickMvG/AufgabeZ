@@ -7,6 +7,10 @@ const reset = document.querySelector(".reset-btn")
 const gokutxt = document.querySelector(".gokutxt")
 const result = document.querySelector(".result")
 const vegetatxt = document.querySelector(".vegetatxt")
+const superGoku = document.querySelector(".superGoku")
+const superVegeta = document.querySelector(".superVegeta")
+
+
 
 
 let g = 0
@@ -21,6 +25,8 @@ reset.addEventListener("click", (event) =>{
     vegetatxt.textContent = ".............."
     vegetaPunkte.style.backgroundColor = ""
     gokuPunkte.style.backgroundColor = ""
+    superGoku.src = "assets/images/SonGoku2.png"
+    superVegeta.src = "assets/images/Vegeta2.png"
 
 })
 
@@ -63,29 +69,29 @@ function backgroundPunkte(v, g){
 
 function punkteZaehlenSchere(zahl){
     if (zahl == 0) {
-        randomGokuAntwortEven(), randomVegetaAntwortEven(),punktFuerEven()
+        randomGokuAntwortEven(), bildVegetaLooseEven(),randomVegetaAntwortEven(),punktFuerEven(),bildGokuLooseEven()
     }else if(zahl == 1){
-        return vegetaPunkte.textContent = ++v, punktFuerVegeta(), randomGokuAntwortLoose(), randomVegetaAntwortWin()
+        return vegetaPunkte.textContent = ++v, bildVegeta(), bildGokuLooseEven(), punktFuerVegeta(), randomGokuAntwortLoose(), randomVegetaAntwortWin()
     }else{
-        return gokuPunkte.textContent = ++g,punktFuerGoku(), randomGokuAntwortWin(), randomVegetaAntwortLoose()
+        return gokuPunkte.textContent = ++g,bildGoku(),bildVegetaLooseEven(),punktFuerGoku(), randomGokuAntwortWin(), randomVegetaAntwortLoose()
     }
 }
 function punkteZaehlenStein(zahl){
     if (zahl == 0) {
-        return gokuPunkte.textContent = ++g, punktFuerGoku(), randomGokuAntwortWin(), randomVegetaAntwortLoose()
+        return gokuPunkte.textContent = ++g, bildVegetaLooseEven(), bildGoku(), punktFuerGoku(), randomGokuAntwortWin(), randomVegetaAntwortLoose()
     }else if(zahl == 1){
-        randomGokuAntwortEven(), randomVegetaAntwortEven(),punktFuerEven()
+        randomGokuAntwortEven(), bildVegetaLooseEven(), randomVegetaAntwortEven(),punktFuerEven(),bildGokuLooseEven()
     }else{
-        return vegetaPunkte.textContent = ++v, punktFuerVegeta(), randomGokuAntwortLoose(), randomVegetaAntwortWin()
+        return vegetaPunkte.textContent = ++v,bildVegeta(), bildGokuLooseEven(), punktFuerVegeta(), randomGokuAntwortLoose(), randomVegetaAntwortWin()
     }
 }
 function punkteZaehlenPapier(zahl){
     if (zahl == 0) {
-        return vegetaPunkte.textContent = ++v, punktFuerVegeta(), randomGokuAntwortLoose(), randomVegetaAntwortWin()
+        return vegetaPunkte.textContent = ++v,bildVegeta(), bildGokuLooseEven(), punktFuerVegeta(), randomGokuAntwortLoose(), randomVegetaAntwortWin()
     }else if(zahl == 1){
-        return gokuPunkte.textContent = ++g, punktFuerGoku(), randomGokuAntwortWin(), randomVegetaAntwortLoose()
+        return gokuPunkte.textContent = ++g, bildVegetaLooseEven(),bildGoku(), punktFuerGoku(), randomGokuAntwortWin(), randomVegetaAntwortLoose()
     }else{
-        randomGokuAntwortEven(), randomVegetaAntwortEven(),punktFuerEven()
+        randomGokuAntwortEven(), randomVegetaAntwortEven(),punktFuerEven(),bildGokuLooseEven(),bildVegetaLooseEven()
     } 
 }
 
@@ -140,5 +146,19 @@ function punktFuerEven(){
     return result.textContent = "Unentschieden"
 }
 function punktFuerVegeta(){
-    return result.textContent = "Vegete →"
+    return result.textContent = "Vegeta →"
+}
+
+function bildGoku(){
+    return superGoku.src = "assets/images/kamehameha2.png"
+}
+function bildGokuLooseEven(){
+    return superGoku.src ="assets/images/SonGoku2.png"
+}
+
+function bildVegeta(){
+    return superVegeta.src = "assets/images/Vegeta4.png"
+}
+function bildVegetaLooseEven(){
+    return superVegeta.src ="assets/images/Vegeta2.png"
 }
