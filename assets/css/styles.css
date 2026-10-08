@@ -1,0 +1,117 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+    background-size: cover;
+    background-image: url(../images/arena.jpg);
+}
+.rahmen-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* margin-top: 10vh; */
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.rahmen{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    border: 2px solid rgba(237, 134, 134, 0.466);
+    width: 1500px;
+    height: 50vh;
+    max-width: 90%;
+    flex-shrink: 0;
+}
+.goku img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.vegeta img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.container-punkte{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.punkte{
+    display: flex;
+    justify-content: center;
+    gap: 1vw;
+    font-size: 5vw;
+    margin-top: 1vh;
+}
+.symbole{
+    display: flex;
+    justify-content: space-around;
+}
+.stein img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.schere img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.papier img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.schere-btn, 
+.stein-btn, 
+.papier-btn{
+    background-color: rgba(233, 123, 121, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.schere-btn:hover,
+.stein-btn:hover,
+.papier-btn:hover {
+    transform: scale(1.5);
+    filter: drop-shadow(0 0 8px rgb(17, 67, 234));
+}
+
+.rst-btn{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    background-color: rgba(251, 116, 116, 0.578);
+}
+.reset-btn{
+    border: none;
+    background-color: rgb(6, 0, 0);
+    padding: 0.3rem;
+    border-radius: 50px;
+    color: red;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+.reset-btn:hover{
+    transform: scale(2);
+    filter: drop-shadow(0 0 8px yellow)
+}
+
+.container-text{
+    display: flex;
+    justify-content: space-between;
+    gap: 5vw;
+    font-size: 1.5vw;
+    color: rgb(14, 10, 255);
+    font-weight: 900;
+    background-color: rgba(249, 176, 6, 0.415);
+    width: 50vw;
+}
